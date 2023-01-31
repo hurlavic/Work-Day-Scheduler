@@ -6,3 +6,10 @@ let lastHour = 6;
 let textInput = document.getElementsByTagName('textarea');
 let container = document.querySelector('.container');
 let save = document.querySelector('.saveBtn');
+
+
+document.getElementById('currentDay').innerHTML = currentDate;
+
+save.addEventListener('click', (e) => {
+    let clickedButton = $(clkBtn);
+})
