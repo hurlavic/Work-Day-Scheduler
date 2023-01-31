@@ -1,15 +1,22 @@
-let currentDate = moment().format('MMMM Do YYYY, h:mm:ss a');
-let currentTime = moment().hour();
+var currentDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+var currentTime = moment().hour();
 
-let firstHour = 8;
-let lastHour = 6;
-let textInput = document.getElementsByTagName('textarea');
-let container = document.querySelector('.container');
-let save = document.querySelector('.saveBtn');
+var firstHour = 8;
+var lastHour = 6;
+var textInput = document.getElementsByTagName('textarea');
+var container = document.querySelector('.container');
+var save = document.querySelector('.saveBtn');
+var timeBlock = document.querySelector('.time-block');
 
 
 document.getElementById('currentDay').innerHTML = currentDate;
 
 save.addEventListener('click', (e) => {
-    let clickedButton = $(clkBtn);
-})
+    var clickedButton = $(clkBtn);
+    var timeBlock2 = clickedButton.closest('.time-block');
+    var closestTextArea = clickedButton.siblings('textarea');
+    var timeBlockId = timeBlockEl.attr("id");
+    localStorage.setItem(timeBlockId, closestTextArea.val());
+});
+
+
